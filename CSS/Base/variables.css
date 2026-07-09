@@ -1,0 +1,69 @@
+:root {
+    /* Backgrounds */
+    --bg-primary: #1C1C1E;
+    --bg-secondary: #2C2C2E;
+    --bg-tertiary: #3A3A3C;
+
+    /* Windows */
+    --window-bg: rgba(40, 40, 43, 0.72);
+    --window-border: rgba(255, 255, 255, 0.08);
+
+    /* Glass */
+    --glass: rgba(255, 255, 255, .12);
+    --glass-hover: rgba(255, 255, 255, 0.16);
+
+    /* Text */
+    --text-primary: #FFFFFF;
+    --text-secondary: #EBEBF599;
+    --text-muted: #8E8E93;
+
+    /* Brand Accent (Hfinity) */
+    --accent: #3B82F6;
+    --accent-hover: #60A5FA;
+    --accent-active: #2563EB;
+
+    /* Status */
+    --success: #30D158;
+    --warning: #FFD60A;
+    --danger: #FF453A;
+
+    /* Shadows */
+    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.25);
+    --shadow-window: 0 20px 60px rgba(0, 0, 0, 0.35);
+
+    /* Effects */
+    --blur-sm: blur(12px);
+    --blur-md: blur(20px);
+    --blur-lg: blur(30px);
+
+    /* Radius */
+    --radius-sm: 10px;
+    --radius-md: 16px;
+    --radius-lg: 22px;
+
+    /* Animation */
+    --transition: 250ms ease;
+
+    /* Animation */
+    --transition: 250ms ease;
+    --ease: cubic-bezier(.2, .8, .2, 1);
+
+    /* Fonts */
+    --font-primary: "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: "SF Mono", monospace;
+
+    /* Z-index */
+    --z-menubar: 1000;
+    --z-window: 100;
+    --z-dock: 900;
+    --z-modal: 2000;
+
+    /* Dock */
+    --dock-height: 70px;
+
+    /* Menu */
+    --menubar-height: 32px;
+
+    /* Icon */
+    --icon-size: 64px;
+}
