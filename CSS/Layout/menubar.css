@@ -1,0 +1,57 @@
+.menu-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    height: var(--menubar-height);
+    background: var(--glass);
+    backdrop-filter: var(--blur-md);
+    -webkit-backdrop-filter: var(--blur-md);
+    font-size: 0.85rem;
+}
+
+.left-menu {
+    display: flex;
+    gap: 1rem;
+}
+
+.right-menu {
+    display: flex;
+    gap: 0.85rem;
+    align-items: center;
+}
+
+.control-center {
+    height: 100%;
+    width: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.siri-icon {
+    height: 100%;
+    width: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-icon {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.battery-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+.battery-icon img{
+    height: 30px;
+    width: 30px;
+}
