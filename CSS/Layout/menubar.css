@@ -3,12 +3,20 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
     padding: 0 1rem;
     height: var(--menubar-height);
+
     background: var(--glass);
     backdrop-filter: var(--blur-md);
     -webkit-backdrop-filter: var(--blur-md);
+
     font-size: 0.85rem;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 .left-menu {
@@ -25,6 +33,7 @@
 .control-center {
     height: 100%;
     width: 18px;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,6 +42,7 @@
 .siri-icon {
     height: 100%;
     width: 22px;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,6 +51,7 @@
 .menu-icon {
     width: 20px;
     height: 20px;
+
     display: block;
 }
 
@@ -48,6 +59,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
     gap: 2px;
 }
 

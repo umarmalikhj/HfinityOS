@@ -21,3 +21,7 @@ a {
     color: var(--text-primary);
     font-family: var(--font-primary);
 }
+
+button {
+    all: unset;
+}

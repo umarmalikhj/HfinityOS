@@ -1,0 +1,23 @@
+.dock {
+    position: fixed;
+    left: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background-color: aqua;
+}
+
+.dock-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.dock-item {
+    width: 72px;
+    height: 72px;
+}
+
+.dock-item img {
+    width: 52px;
+    height: 52px;
+}
