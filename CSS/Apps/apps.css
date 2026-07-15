@@ -1,0 +1,19 @@
+.window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: var(--bg-primary);
+    border-radius: var(--radius-sm);
+    height: 60%;
+    width: 50%;
+}
+
+.window-sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 25%;
+}
