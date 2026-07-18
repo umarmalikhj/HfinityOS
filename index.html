@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/3.44.0/tabler-icons.min.css"
+        integrity="sha512-51mlV3yV4w8hWM53dgWBoArshl8CTDwsDH0Oqzpp4JmwuIxJ3TUlMknQSgu/V2sBGZepqacbBhkVleh+9EeyhA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="./CSS/style.css">
     <title>HfinityOS</title>
 </head>
@@ -53,21 +56,73 @@
                     </button>
                 </div>
 
-                <div class="window-fav"></div>
+                <div class="sidebar-links">
+                    <div class="sidebar-group">
+                        <h3 class="sidebar-head">Favorites</h3>
+                        <div class="icon-list">
+                            <button class="sidebar-icons">
+                                <img src="./Assets/Icons/Window Icons/recents.svg" alt="Recents Icon"> Recents
+                            </button>
+                            <button class="sidebar-icons">
+                                <img src="./Assets/Icons/Window Icons/appstore.svg" alt="Applications Icon"> Applications
+                            </button>
+                            <button class="sidebar-icons">
+                                <img src="./Assets/Icons/Window Icons/window.svg" alt="Desktop"> Desktop
+                            </button>
+                            <button class="sidebar-icons">
+                                <img src="./Assets/Icons/Window Icons/downloads.svg" alt="Downloads"> Downloads
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-group">
+                        <h3 class="sidebar-head">iCloud</h3>
+                        <div class="icon-list">
+                            <button class="sidebar-icons">
+                                <img src="./Assets/Icons/Window Icons/cloud.svg" alt="iCloud"> iCloud Drive
+                            </button>
+                            <button class="sidebar-icons">
+                                <img src="./Assets/Icons/Window Icons/file.svg" alt="Documents"> Documents
+                            </button>
+                            <button class="sidebar-icons">
+                                <img src="./Assets/Icons/Window Icons/window.svg" alt="Desktop"> Desktop
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
-            <div class="window-header">
-                <div class="window-title">Finder</div>
+            <div class="window-main">
+                <div class="window-header">
+                    <div>
+                        <i class="ti ti-chevron-left"></i>
+                        <i class="ti ti-chevron-right"></i>
+                        <h3>Recents</h3>
+                    </div>
+                    <div>
+                        <div>
+                            <i class="ti ti-layout-grid"></i>
+                            <i class="ti ti-selector"></i>
+                        </div>
+
+                        <div>
+                            <img src="./Assets/Icons/Window Icons/grid-divider.png" height="16px" width="16px">
+                            <i class="ti ti-chevron-down"></i>
+                        </div>
+                        <i class="ti ti-share-2"></i>
+                        <i class="ti ti-tag"></i>
+                        <div>
+                            <i class="ti ti-dots-circle-horizontal"></i>
+                            <i class="ti ti-chevron-down"></i>
+                        </div>
+                        <i class="ti ti-chevron-down"></i>
+
+                        <i class="ti ti-search"></i>
+                    </div>
+                </div>
+                <div class="window-content"></div>
             </div>
-
-            <section class="finder">
-
-                <aside class="finder-sidebar"></aside>
-
-                <main class="finder-main"></main>
-
-            </section>
-
         </div>
 
     </main>
