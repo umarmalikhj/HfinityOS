@@ -8,12 +8,57 @@
     border-radius: var(--radius-sm);
     height: 60%;
     width: 50%;
+
+    display: grid;
+    grid-template-columns: 1fr 3fr;
 }
 
 .window-sidebar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 25%;
+    padding: 0.5rem;
+}
+
+.window-controls {
+    display: flex;
+}
+
+.icon-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.sidebar-head {
+    font-size: 10px;
+    font-weight: 600;
+    color: #696969;
+    margin: 1.5em 0 0.5em 0;
+}
+
+.sidebar-icons {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--text-primary);
+    font-size: 0.85rem;
+    font-weight: 300;
+}
+
+.sidebar-icons img {
+    width: 20px;
+    height: 20px;
+}
+
+.window-header {
+    display: flex;
+    justify-content: space-between;
+    height: 3rem;
+    align-items: center;
+    padding: 0 1rem;
+    color: white;
+}
+
+.window-header div{
+    display: flex;
+    gap: 5px;
+    align-items: center;
 }
