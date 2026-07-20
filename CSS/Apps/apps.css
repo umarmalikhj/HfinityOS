@@ -7,7 +7,7 @@
     background-color: var(--bg-primary);
     border-radius: var(--radius-sm);
     height: 60%;
-    width: 50%;
+    width: 80%;
 
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -19,6 +19,12 @@
 
 .window-controls {
     display: flex;
+    padding: 0.75rem 0.5rem;
+    gap: 3px;
+}
+
+.window-controls button i {
+    font-size: 0.8rem;
 }
 
 .icon-list {
@@ -31,7 +37,7 @@
     font-size: 10px;
     font-weight: 600;
     color: #696969;
-    margin: 1.5em 0 0.5em 0;
+    margin: 0.75em 0 0.5em 0;
 }
 
 .sidebar-icons {
@@ -51,14 +57,56 @@
 .window-header {
     display: flex;
     justify-content: space-between;
-    height: 3rem;
+    height: 3.75rem;
     align-items: center;
     padding: 0 1rem;
-    color: white;
+    color: #B6B6B6;
 }
 
-.window-header div{
+/* 
+------------------------------
+    Icon Size - Individual 
+------------------------------
+*/
+
+.window-header div {
     display: flex;
-    gap: 5px;
     align-items: center;
+}
+
+.font1{
+    font-size: 1.25rem;
+}
+
+.ti-chevron-down {
+    font-size: 0.75rem;
+}
+
+.window-nvg h3 {
+    color: #EBEBEB;
+    font-size: 0.9rem;
+}
+
+.window-nvg i {
+    margin-right: 1rem;
+}
+
+.window-quick-actions {
+    gap: 2.5rem;
+}
+
+.ti-layout-grid {
+    font-size: 1.2rem;
+}
+
+.ti-tag {
+    transform: scaleX(-1);
+}
+
+.quick-act {
+    gap: 1rem;
+}
+
+.quick-more {
+    gap: 0.75rem;
 }
