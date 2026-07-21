@@ -2,3 +2,14 @@
 body {
     background: url(../../Assets/Wallpapers/Catalina.jpg) center center / cover no-repeat;
 }
+
+.desktop::before {
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.15);
+}
+
+.desktop > * {
+    position:relative;
+}

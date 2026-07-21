@@ -7,9 +7,16 @@
     padding: 0 1rem;
     height: var(--menubar-height);
 
-    background: var(--glass);
-    backdrop-filter: var(--blur-md);
-    -webkit-backdrop-filter: var(--blur-md);
+    background: rgba(15, 15, 20, 0.45);
+
+    backdrop-filter: blur(30px) saturate(140%);
+    -webkit-backdrop-filter: blur(30px) saturate(140%);
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.08),
+        0 8px 30px rgba(0,0,0,0.25);
 
     font-size: 0.85rem;
 
@@ -19,9 +26,36 @@
     right: 0;
 }
 
+.menu-bar::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    height: 1px;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, .25),
+            transparent);
+}
+
 .left-menu {
     display: flex;
     gap: 1rem;
+}
+
+.left-menu a {
+    color: rgba(255, 255, 255, .85);
+
+    padding: 3px 5px;
+    border-radius: 6px;
+
+    transition: .2s ease;
 }
 
 .right-menu {
@@ -49,21 +83,25 @@
 }
 
 .menu-icon {
-    width: 20px;
-    height: 20px;
-
     display: block;
+
+    width: 18px;
+    height: 18px;
+
+    opacity: .85;
+
+    transition: .2s ease;
 }
 
 .battery-icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     gap: 2px;
 }
 
-.battery-icon img{
+.battery-icon img {
     height: 30px;
     width: 30px;
 }
