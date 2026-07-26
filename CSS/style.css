@@ -8,8 +8,8 @@
     Layout
 --------------*/
 @import url("./layout/desktop.css");
-@import url("./layout/dock.css");
-@import url("./layout/menubar.css");
+@import url("../components/dock/dock.css");
+@import url("../components/menubar/menubar.css");
 
 /*----------------
     Components 
@@ -19,7 +19,7 @@
 /*----------
     Apps 
 ------------*/
-@import url("./apps/finder.css");
+@import url("../components/window/window.css");
 
 /*------------
     Core 
