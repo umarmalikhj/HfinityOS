@@ -1,0 +1,1 @@
+import "../components/window/window.js";
