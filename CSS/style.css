@@ -14,12 +14,12 @@
 /*----------------
     Components 
 ------------------*/
-@import url("./components/windows.css");
+@import url("../components/window/window.css");
 
 /*----------
     Apps 
 ------------*/
-@import url("../apps/window/window.css");
+@import url("../apps/finder/finder.css");
 
 /*------------
     Core 
