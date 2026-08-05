@@ -11,27 +11,35 @@
     grid-template-columns: 165px 1fr;
 
     overflow: hidden;
-    
+
     border: 1px solid rgba(255, 255, 255, 0.1);
 
     /* display: none; */
 
-    animation: openWindow .35s cubic-bezier(.2,.8,.2,1);
+    animation: openWindow .35s cubic-bezier(.2, .8, .2, 1);
+
+    transition:
+        width .35s cubic-bezier(.22, 1, .36, 1),
+        height .35s cubic-bezier(.22, 1, .36, 1),
+        top .35s cubic-bezier(.22, 1, .36, 1),
+        left .35s cubic-bezier(.22, 1, .36, 1),
+        transform .35s cubic-bezier(.22, 1, .36, 1),
+        border-radius .25s ease,
+        opacity .2s ease;
+    ;
 }
 
 @keyframes openWindow {
     from {
-        opacity:0;
+        opacity: 0;
         transform:
-        translate(-50%, -50%)
-        scale(.92);
+            translate(-50%, -50%) scale(.92);
     }
 
     to {
-        opacity:1;
+        opacity: 1;
         transform:
-        translate(-50%, -50%)
-        scale(1);
+            translate(-50%, -50%) scale(1);
     }
 }
 
@@ -42,7 +50,7 @@
 .window-sidebar {
     padding: 0.75rem;
 
-    border-right: 1px solid rgba(255,255,255,0.1);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
 
     -webkit-backdrop-filter: blur(30px);
 
@@ -52,7 +60,7 @@
 
     background: rgba(18, 18, 22, 0.62);
     backdrop-filter: blur(35px);
-    isolation:isolate;
+    isolation: isolate;
 }
 
 .window-controls {
@@ -161,4 +169,28 @@
 
 .quick-more {
     gap: 0.75rem;
+}
+
+/* States */
+
+.window.hidden {
+    display: none;
+}
+
+.window.fullscreen {
+    width: calc(100vw - 4.5rem);
+    height: calc(100vh - var(--menubar-height));
+
+    top: var(--menubar-height);
+    left: 4.25rem;
+
+    transform: none;
+}
+
+.window.minimized {
+    transform:
+        translate(-180%, -40%)
+        scale(.05);
+
+    opacity:0;
 }

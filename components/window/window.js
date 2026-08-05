@@ -4,6 +4,13 @@ const maxBtn = document.getElementById("maximize-btn");
 const windowElement = document.getElementById("window");
 
 closeBtn.onclick = () => {
-    windowElement.remove();
+    windowElement.classList.add("hidden");
 }
 
+maxBtn.onclick = () => {
+    windowElement.classList.toggle("fullscreen");
+}
+
+miniBtn.onclick = () => {
+    windowElement.classList.add("minimized");
+}
