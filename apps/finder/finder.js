@@ -105,12 +105,12 @@ function loadContent(window) {
 
 export function openFinder() {
 
-    const window = createWindow();
+    const finderWindow = createWindow();
 
-    loadSidebar(window);
+    loadSidebar(finderWindow);
 
-    loadHeader(window);
+    loadHeader(finderWindow);
 
-    loadContent(window);
+    loadContent(finderWindow);
 
 };

@@ -36,11 +36,17 @@
 .window-header {
     display: flex;
     justify-content: space-between;
-    height: 3.75rem;
     align-items: center;
+
+    height: 3.75rem;
+    width: calc(100% - 165px);
+    
     padding: 0 1.25rem 0 2rem;
+
     color: #B6B6B6;
     background-color: #363636;
+
+    position: absolute;
 }
 
 /* 

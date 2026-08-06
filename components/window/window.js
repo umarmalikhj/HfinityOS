@@ -1,21 +1,21 @@
 export function createWindow() {
     const desktop = document.querySelector(".desktop");
 
-    const window = document.createElement("section");
-    window.className = "window";
+    const windowEl = document.createElement("section");
+    windowEl.className = "window";
 
-    window.innerHTML = `
+    windowEl.innerHTML = `
         <div class="window-sidebar">
                 
             <div class="window-controls">
                 <button class="close">
-                    <i class="fa-solid fa-circle-xmark" style="color: #FF5F58;" id="close-btn"></i>
+                    <i class="fa-solid fa-circle-xmark" style="color: #FF5F58;"></i>
                 </button>
                 <button class="minimize">
-                    <i class="fa-solid fa-circle-minus" style="color: #FEBC2E;" id="minimize-btn"></i>
+                    <i class="fa-solid fa-circle-minus" style="color: #FEBC2E;"></i>
                 </button>
                 <button class="maximize">
-                    <i class="fa-solid fa-circle-plus" style="color: #27C840;" id="maximize-btn"></i>
+                    <i class="fa-solid fa-circle-plus" style="color: #27C840;"></i>
                 </button>
             </div>
 
@@ -43,28 +43,51 @@ export function createWindow() {
         </div>
     `;
 
-    desktop.appendChild(window);
+    desktop.appendChild(windowEl);
 
-    const closeBtn = document.querySelector(".close");
-    const miniBtn = document.querySelector(".minimize");
-    const maxBtn = document.querySelector(".maximize");
-    // const windowElement = document.getElementById("window");
+    const closeBtn = windowEl.querySelector(".close");
+    const miniBtn = windowEl.querySelector(".minimize");
+    const maxBtn = windowEl.querySelector(".maximize");
 
     closeBtn.onclick = () => {
-        // window.classList.add("hidden");
-        // window.remove();
+        windowEl.remove();
     }
 
     maxBtn.onclick = () => {
-        window.classList.toggle("fullscreen");
+        windowEl.classList.toggle("fullscreen");
     }
 
     miniBtn.onclick = () => {
-        window.classList.add("minimized");
+        windowEl.classList.add("minimized");
     }
 
-    
-
-    return window;
+    return windowEl;
 }
 
+function windowDrag() {
+    const dragElement = windowEl.querySelector(".window-header");
+
+    let offsetX = 0;
+    let offsetY = 0;
+
+    function OnMouseMove(event) {
+        dragElement.style.left = `${event.clientX - offsetX}px`;
+        dragElement.style.top = `${event.clientY - offsetY}px`;
+    }
+
+    function onMouseUp() {
+        document.removeEventListener("mousemove", OnMouseMove);
+        document.removeEventListener("mouseup", onMouseUp);
+        windowDrag.style.cursor = "pointer";
+    }
+
+    dragElement.addEventListener("mousedown"), (event) => {
+        offsetX = event.clientX - dragElement.offsetLeft;
+        offsetY = event.clientY - dragElement.offsetTop;
+
+        dragElement.style.cursor = "pointer";
+
+        document.addEventListener("mousemove", OnMouseMove);
+        document.addEventListener("mouseup", onMouseUp);
+    }
+}

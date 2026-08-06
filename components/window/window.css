@@ -73,10 +73,6 @@
 
 /* States */
 
-.window.hidden {
-    display: none;
-}
-
 .window.fullscreen {
     width: calc(100vw - 4.5rem);
     height: calc(100vh - var(--menubar-height));
