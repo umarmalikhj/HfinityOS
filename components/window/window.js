@@ -49,45 +49,45 @@ export function createWindow() {
     const miniBtn = windowEl.querySelector(".minimize");
     const maxBtn = windowEl.querySelector(".maximize");
 
-    closeBtn.onclick = () => {
+    closeBtn.addEventListener("click", () => {
         windowEl.remove();
-    }
+    })
 
-    maxBtn.onclick = () => {
+    maxBtn.addEventListener("click", () => {
         windowEl.classList.toggle("fullscreen");
-    }
+    })
 
-    miniBtn.onclick = () => {
+    miniBtn.addEventListener("click", () => {
         windowEl.classList.add("minimized");
-    }
+    })
 
     return windowEl;
 }
 
-function windowDrag() {
-    const dragElement = windowEl.querySelector(".window-header");
+// function windowDrag() {
+//     const dragElement = windowEl.querySelector(".window-header");
 
-    let offsetX = 0;
-    let offsetY = 0;
+//     let offsetX = 0;
+//     let offsetY = 0;
 
-    function OnMouseMove(event) {
-        dragElement.style.left = `${event.clientX - offsetX}px`;
-        dragElement.style.top = `${event.clientY - offsetY}px`;
-    }
+//     function OnMouseMove(event) {
+//         dragElement.style.left = `${event.clientX - offsetX}px`;
+//         dragElement.style.top = `${event.clientY - offsetY}px`;
+//     }
 
-    function onMouseUp() {
-        document.removeEventListener("mousemove", OnMouseMove);
-        document.removeEventListener("mouseup", onMouseUp);
-        windowDrag.style.cursor = "pointer";
-    }
+//     function onMouseUp() {
+//         document.removeEventListener("mousemove", OnMouseMove);
+//         document.removeEventListener("mouseup", onMouseUp);
+//         windowDrag.style.cursor = "pointer";
+//     }
 
-    dragElement.addEventListener("mousedown"), (event) => {
-        offsetX = event.clientX - dragElement.offsetLeft;
-        offsetY = event.clientY - dragElement.offsetTop;
+//     dragElement.addEventListener("mousedown"), (event) => {
+//         offsetX = event.clientX - dragElement.offsetLeft;
+//         offsetY = event.clientY - dragElement.offsetTop;
 
-        dragElement.style.cursor = "pointer";
+//         dragElement.style.cursor = "pointer";
 
-        document.addEventListener("mousemove", OnMouseMove);
-        document.addEventListener("mouseup", onMouseUp);
-    }
-}
+//         document.addEventListener("mousemove", OnMouseMove);
+//         document.addEventListener("mouseup", onMouseUp);
+//     }
+// }
