@@ -103,14 +103,14 @@ function loadContent(window) {
     `;
 }
 
-export function openFinder() {
+// export function openFinder() {
 
-    const finderWindow = createWindow();
+//     const finderWindow = createWindow();
 
-    loadSidebar(finderWindow);
+//     loadSidebar(finderWindow);
 
-    loadHeader(finderWindow);
+//     loadHeader(finderWindow);
 
-    loadContent(finderWindow);
+//     loadContent(finderWindow);
 
-};
+// };

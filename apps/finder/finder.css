@@ -9,12 +9,12 @@
     padding: 5px;
 }
 
-.sidebar-head {
+/* .sidebar-head {
     font-size: 10px;
     font-weight: 600;
     color: #696969;
     margin: 0.75em 0;
-}
+} */
 
 .sidebar-icons {
     display: flex;
@@ -46,7 +46,7 @@
     color: #B6B6B6;
     background-color: #363636;
 
-    position: absolute;
+    /* position: absolute; */
 }
 
 /* 
