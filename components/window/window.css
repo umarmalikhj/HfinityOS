@@ -1,18 +1,15 @@
-/* .window {
+.window {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border-radius: var(--radius-sm);
-    height: 60%;
-    width: 65%;
 
-    display: grid;
-    grid-template-columns: 165px 1fr;
+    border-radius: var(--radius-sm);
+
+    width: 65%;
+    height: 60%;
 
     overflow: hidden;
-
-    border: 1px solid rgba(255, 255, 255, 0.1);
 
     animation: openWindow .35s cubic-bezier(.2, .8, .2, 1);
 
@@ -41,12 +38,23 @@
     }
 }
 
-.window-main {
-    background-color: #1E1E1E;
+
+.window-topbar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    height: 3.75rem;
+
+    color: #B6B6B6;
 }
 
-.window-sidebar {
-    padding: 0.75rem;
+.window-controls {
+    display: flex;
+    width: 165px;
+    padding: 0.75rem 1.25rem;
+    gap: 3px;
 
     border-right: 1px solid rgba(255, 255, 255, 0.1);
 
@@ -59,41 +67,17 @@
     background: rgba(18, 18, 22, 0.62);
     backdrop-filter: blur(35px);
     isolation: isolate;
+
+    overflow: hidden;
 }
 
-.window-controls {
-    display: flex;
-    padding: 0.75rem 0.25rem;
-    gap: 3px;
-}
-
-.window-controls button i {
-    font-size: 0.8rem;
-}
-
- */
-
-.window {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: var(--radius-sm);
-    width: 65%;
-
+.window-header {
     background-color: #363636;
 }
 
-.window-topbar {
-    width: 100%;
+.window-body {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    height: 3.75rem;
-
-    color: #B6B6B6;
-    padding-left: 1rem;
+    height: 100%;
 }
 
 .window-sidebar {
@@ -114,13 +98,10 @@
     isolation: isolate;
 }
 
-.window-controls {
-    display: flex;
-    padding: 0.75rem 0.25rem;
-    gap: 3px;
-}
-
 .window-content {
+    flex: 1;
+    min-width: 0;
+    
     background-color: #1E1E1E;
 }
 

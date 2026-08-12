@@ -1,58 +1,15 @@
-import{ createWindow } 
-from "../../components/window/window.js"
+import{ createWindow } from "../../components/window/window.js"
 
-function loadSidebar(window) {
-    const sidebar = window.querySelector(".sidebar-links");
-    sidebar.innerHTML = `
-        <div class="sidebar-group">
-            <h3 class="sidebar-head">Favorites</h3>
-            <div class="icon-list">
-                <button class="sidebar-icons">
-                    <i class="ti ti-clock-hour-9"></i>
-                    <span>Recents</span>
-                </button>
-                <button class="sidebar-icons">
-                    <i class="ti ti-brand-appstore"></i>
-                    <span>Applications</span>
-                </button>
-                <button class="sidebar-icons">
-                    <i class="ti ti-app-window"></i>
-                    <span>Desktop</span>
-                </button>
-                <button class="sidebar-icons">
-                    <i class="ti ti-circle-arrow-down"></i>
-                    <span>Downloads</span>
-                </button>
-            </div>
-        </div>
+export function openFinder() {
+    const windowEl = createWindow();
 
-        <div class="sidebar-group">
-            <h3 class="sidebar-head">iCloud</h3>
+    loadSidebar(windowEl);
+    loadHeader(windowEl);
+    loadContent(windowEl);
+}
 
-            <div class="icon-list">
-                <button class="sidebar-icons">
-                    <i class="ti ti-cloud" style="color:#30CEEA;"></i>
-                    <span>iCloud Drive</span>
-                </button>
-                <button class="sidebar-icons">
-                    <i class="ti ti-file" style="color:#30CEEA;"></i>
-                    <span>Documents</span>
-                </button>
-                <button class="sidebar-icons">
-                    <i class="ti ti-app-window" style="color:#30CEEA;"></i>
-                    <span>Desktop</span>
-                </button>
-                <button class="sidebar-icons">
-                    <i class="ti ti-folder-share" style="color:#30CEEA;"></i>
-                    <span>Shared</span>
-                </button>
-            </div>
-        </div>
-        `;
-};
-
-function loadHeader(window) {
-    const header = window.querySelector(".window-header");
+function loadHeader(windowEl) {
+    const header = windowEl.querySelector(".window-header");
     header.innerHTML = `
         <div class="window-nvg">
             <div>
@@ -95,22 +52,73 @@ function loadHeader(window) {
     `;
 };
 
-function loadContent(window) {
-    const content = window.querySelector(".window-content");
+function loadSidebar(windowEl) {
+    const sidebar = windowEl.querySelector(".window-sidebar");
+    sidebar.innerHTML = `
+        <div class="sidebar-group">
+            <h3 class="sidebar-head">Favorites</h3>
+
+            <div class="icon-list">
+
+                <button class="sidebar-icons">
+                    <i class="ti ti-clock-hour-9"></i>
+                    <span>Recents</span>
+                </button>
+
+                <button class="sidebar-icons">
+                    <i class="ti ti-brand-appstore"></i>
+                    <span>Applications</span>
+                </button>
+
+                <button class="sidebar-icons">
+                    <i class="ti ti-app-window"></i>
+                    <span>Desktop</span>
+                </button>
+
+                <button class="sidebar-icons">
+                    <i class="ti ti-circle-arrow-down"></i>
+                    <span>Downloads</span>
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="sidebar-group">
+            <h3 class="sidebar-head">iCloud</h3>
+
+            <div class="icon-list">
+
+                <button class="sidebar-icons">
+                    <i class="ti ti-cloud" style="color:#30CEEA;"></i>
+                    <span>iCloud Drive</span>
+                </button>
+
+                <button class="sidebar-icons">
+                    <i class="ti ti-file" style="color:#30CEEA;"></i>
+                    <span>Documents</span>
+                </button>
+
+                <button class="sidebar-icons">
+                    <i class="ti ti-app-window" style="color:#30CEEA;"></i>
+                    <span>Desktop</span>
+                </button>
+
+                <button class="sidebar-icons">
+                    <i class="ti ti-folder-share" style="color:#30CEEA;"></i>
+                    <span>Shared</span>
+                </button>
+
+            </div>
+
+        </div>
+    `;
+};
+
+function loadContent(windowEl) {
+    const content = windowEl.querySelector(".window-content");
 
     content.innerHTML = `
 
     `;
 }
-
-// export function openFinder() {
-
-//     const finderWindow = createWindow();
-
-//     loadSidebar(finderWindow);
-
-//     loadHeader(finderWindow);
-
-//     loadContent(finderWindow);
-
-// };
