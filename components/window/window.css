@@ -94,7 +94,7 @@
         inset 0 1px 0 rgba(255, 255, 255, 0.08);
 
     background: rgba(18, 18, 22, 0.62);
-    backdrop-filter: blur(35px);
+    backdrop-filter: blur(40px);
     isolation: isolate;
 }
 
@@ -110,9 +110,12 @@
 }
 
 .window.fullscreen {
-    width: calc(100vw - 4.5rem);
+    width: calc(100vw - 4.2rem);
     height: calc(100vh - var(--menubar-height));
 
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    
     top: var(--menubar-height);
     left: 4.25rem;
 
