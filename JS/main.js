@@ -1,2 +1,3 @@
 import "../components/window/window.js";
-import "../components/dock/dock.js"
+import "../components/dock/dock.js";
+import "../components/menubar/menubar.js";
