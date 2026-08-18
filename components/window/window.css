@@ -22,6 +22,8 @@
         border-radius .25s ease,
         opacity .2s ease;
     ;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
 }
 
 @keyframes openWindow {
@@ -122,10 +124,9 @@
     transform: none;
 }
 
-.window.minimized {
-    transform:
-        translate(-180%, -40%)
-        scale(.05);
 
-    opacity:0;
+.window.maximized {
+    transform: 
+        translate(180%, 40%)
+    ;
 }

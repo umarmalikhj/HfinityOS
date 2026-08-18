@@ -2,7 +2,6 @@ import { openFinder } from "../../apps/finder/finder.js";
 
 const dockItems = document.querySelectorAll(".dock-item");
 
-
 const apps = {
     finder: openFinder
     // brave: openBrave,
@@ -13,14 +12,26 @@ const apps = {
     // photos: openPhotos,
     // vscode: openVSCode,
     // bin: openBin
+};
+
+const openApps = {};
+
+function onClose() {
+    delete openApps[appName];
 }
-
-
 
 dockItems.forEach(item => {
     item.addEventListener("click", () => {
-        apps[item.dataset.app]();
+        const appName = item.dataset.app;
 
-        apps[app]?.();
+        if (openApps[appName]) {
+            openApps[appName].classList.remove("minimized");
+        }
+
+        else {
+            const window = apps[appName]();
+            openApps[appName] = window;
+        }
     })
-})
+});
+

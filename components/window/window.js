@@ -1,4 +1,4 @@
-export function createWindow() {
+export function createWindow(onClose) {
     const desktop = document.querySelector(".desktop");
 
     const windowEl = document.createElement("section");
@@ -41,6 +41,7 @@ export function createWindow() {
     const maxBtn = windowEl.querySelector(".maximize");
 
     closeBtn.addEventListener("click", () => {
+        onClose();
         windowEl.remove();
     })
 
