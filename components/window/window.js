@@ -1,4 +1,6 @@
-export function createWindow(onClose) {
+import { windowControl } from "../window_manager/windowmanager.js";
+
+export function createWindow() {
     const desktop = document.querySelector(".desktop");
 
     const windowEl = document.createElement("section");
@@ -36,22 +38,7 @@ export function createWindow(onClose) {
 
     desktop.appendChild(windowEl);
 
-    const closeBtn = windowEl.querySelector(".close");
-    const miniBtn = windowEl.querySelector(".minimize");
-    const maxBtn = windowEl.querySelector(".maximize");
-
-    closeBtn.addEventListener("click", () => {
-        onClose();
-        windowEl.remove();
-    })
-
-    maxBtn.addEventListener("click", () => {
-        windowEl.classList.toggle("fullscreen");
-    })
-
-    miniBtn.addEventListener("click", () => {
-        windowEl.classList.add("minimized");
-    })
+    windowControl();
 
     return windowEl;
 }

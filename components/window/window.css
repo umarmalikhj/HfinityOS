@@ -130,3 +130,11 @@
         translate(180%, 40%)
     ;
 }
+
+.window.minimized {
+    transform:
+        translate(-180%, -40%)
+        scale(.05);
+
+    opacity:0;
+}
