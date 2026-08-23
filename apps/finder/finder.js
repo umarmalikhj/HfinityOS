@@ -6,6 +6,8 @@ export function openFinder() {
     loadSidebar(windowEl);
     loadHeader(windowEl);
     loadContent(windowEl);
+
+    return windowEl;
 }
 
 function loadHeader(windowEl) {
