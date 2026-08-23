@@ -5,7 +5,7 @@ export function openPhotos() {
 
     // loadSidebar(windowEl);
     loadHeader(windowEl);
-    // loadContent(windowEl);
+    // loadContent(windowEl);  
     return windowEl;
 }
 
