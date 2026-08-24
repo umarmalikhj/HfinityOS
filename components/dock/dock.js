@@ -25,7 +25,9 @@ dockItems.forEach(item => {
     item.addEventListener("click", () => {
         console.log("clicked", appName)
     
-        apps[item.dataset.app]();
+        openApps[appName.value] = apps[item.dataset.app]();
+
+        console.log(openApps.appName);
 
     })
 })
