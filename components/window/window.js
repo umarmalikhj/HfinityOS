@@ -38,7 +38,7 @@ export function createWindow() {
 
     desktop.appendChild(windowEl);
 
-    windowControl();
+    windowControl(windowEl);
 
     return windowEl;
 }

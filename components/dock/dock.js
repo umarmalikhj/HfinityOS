@@ -19,18 +19,20 @@ const apps = {
 const openApps = {};
 
 dockItems.forEach(item => {
-    
+
     const appName = item.dataset.app;
-    
+
     item.addEventListener("click", () => {
-        console.log("clicked", appName)
-    
-        openApps[appName.value] = apps[item.dataset.app]();
+        
+        if (openApps[appName]) {
+            if (appName.classList.contains(".minimized")){
+                appName.classList.remove(".minimized")
+            }
+        }
 
-        console.log(openApps.appName);
-
+        else {
+            openApps[appName] = apps[item.dataset.app]();
+            console.log(openApps)
+        }
     })
 })
-
-console.log(dockItems)
-console.log(dockItems.length);

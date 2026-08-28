@@ -2,8 +2,8 @@ function windowManager() {
     
 }
 
-export function windowControl() {
-    const windowEl = document.querySelector(".window");
+export function windowControl(windowEl) {
+    // windowEl = document.querySelector(".window");
 
     const closeBtn = windowEl.querySelector(".close");
     const miniBtn = windowEl.querySelector(".minimize");
