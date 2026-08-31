@@ -1,6 +1,6 @@
 import { windowControl } from "../window_manager/windowmanager.js";
 
-export function createWindow() {
+export function createWindow(appName) {
     const desktop = document.querySelector(".desktop");
 
     const windowEl = document.createElement("section");
@@ -40,5 +40,5 @@ export function createWindow() {
 
     windowControl(windowEl);
 
-    return windowEl;
+    return windowEl, appName;
 }

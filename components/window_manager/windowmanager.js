@@ -1,14 +1,17 @@
+import { onClose } from "../dock/dock.js";
+
 function windowManager() {
     
 }
 
-export function windowControl(windowEl) {
+export function windowControl(windowEl, appName) {
     const closeBtn = windowEl.querySelector(".close");
     const miniBtn = windowEl.querySelector(".minimize");
     const maxBtn = windowEl.querySelector(".maximize");
 
     closeBtn.addEventListener("click", () => {
         windowEl.remove();
+        onClose(appName);
     })
 
     maxBtn.addEventListener("click", () => {

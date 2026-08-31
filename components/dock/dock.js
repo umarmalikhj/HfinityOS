@@ -16,6 +16,7 @@ const apps = {
 };
 
 
+
 const openApps = {};
 
 dockItems.forEach(item => {
@@ -25,14 +26,18 @@ dockItems.forEach(item => {
     item.addEventListener("click", () => {
         
         if (openApps[appName]) {
-            if (appName.classList.contains(".minimized")){
-                appName.classList.remove(".minimized")
+            if (openApps[appName].classList.contains("minimized")){
+                openApps[appName].classList.remove("minimized");
             }
         }
 
         else {
             openApps[appName] = apps[item.dataset.app]();
-            console.log(openApps)
         }
     })
 })
+
+export function onClose(appName){
+    delete openApps[appName];
+    return appName;
+}
